@@ -43,6 +43,7 @@ class User extends Component
      */
     public function createUser()
     {
+        sleep(1);
         try {
             // validation 
             $this->createForm->validate();
@@ -84,7 +85,7 @@ class User extends Component
      */
     public function populateUser($id)
     {
-        // sleep(1);
+        sleep(1);
         $user = ModelsUser::find($id);
         $this->editForm->id = $user->id;
         $this->editForm->name = $user->name;
@@ -98,6 +99,7 @@ class User extends Component
      */
     public function editUser()
     {
+        sleep(1);
         try {
             // get user to be edited
             $user = ModelsUser::find($this->editForm->id);
